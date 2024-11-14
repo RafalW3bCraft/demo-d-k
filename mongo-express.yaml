@@ -45,6 +45,7 @@ metadata:
 spec:
   selector:
     app: mongo-express
+  #  make external service with type: LoadBalancer also need nodePort in range
   type: LoadBalancer
   ports:
     - protocol: TCP
