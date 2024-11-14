@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongo-express
+  namespace: rafalcraft
   labels:
     app: mongo-express
 spec:
@@ -42,6 +43,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongo-express-service
+  namespace: rafalcraft
 spec:
   selector:
     app: mongo-express
@@ -51,6 +53,6 @@ spec:
     - protocol: TCP
       port: 8081
       targetPort: 8081
-      nodePort: 30333
+      # removed node port as using ingress nodePort: 30333
 
           

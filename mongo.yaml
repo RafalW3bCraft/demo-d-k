@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb-deployment
+  namespace: rafalcraft
   labels:
     app: mongodb
 spec:
@@ -37,6 +38,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongodb-service
+  namespace: rafalcraft
 spec:
   selector:
     app: mongodb
