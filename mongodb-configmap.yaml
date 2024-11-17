@@ -1,7 +1,9 @@
+# mongodb-configmap.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mongodb-configmap
   namespace: rafalcraft
 data:
-  database_url:  mongodb-service
+  MONGO_URI: "mongodb://$(MONGO_ROOT_USERNAME):$(MONGO_ROOT_PASSWORD)@mongodb:27017/rafalcraft?authSource=admin"
+  PORT: "3000"

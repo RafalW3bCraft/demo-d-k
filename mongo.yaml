@@ -1,15 +1,14 @@
+# mongo.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongodb-deployment
+  name: mongodb
   namespace: rafalcraft
-  labels:
-    app: mongodb
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: mongodb
+  replicas: 1
   template:
     metadata:
       labels:
@@ -20,7 +19,7 @@ spec:
         image: mongo:latest
         ports:
         - containerPort: 27017
-        env: 
+        env:
         - name: MONGO_INITDB_ROOT_USERNAME
           valueFrom:
             secretKeyRef:
@@ -31,18 +30,23 @@ spec:
             secretKeyRef:
               name: mongodb-secret
               key: mongo-root-password
-
+        volumeMounts:
+        - name: mongodb-data
+          mountPath: /data/db
+      volumes:
+      - name: mongodb-data
+        persistentVolumeClaim:
+          claimName: mongodb-pvc
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongodb-service
+  name: mongodb
   namespace: rafalcraft
 spec:
   selector:
     app: mongodb
   ports:
-    - protocol: TCP
-      port: 27017
-      targetPort: 27017
+  - port: 27017
+    targetPort: 27017
+  type: ClusterIP

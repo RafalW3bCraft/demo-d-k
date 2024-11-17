@@ -1,12 +1,13 @@
+# nginx-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: todo-app
   namespace: rafalcraft
 spec:
   selector:
-    app: nginx
+    app: todo-app
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
+  - port: 80
+    targetPort: 3000
+  type: LoadBalancer

@@ -1,22 +1,36 @@
+# nginx-deployment.yaml (for the Node.js app)
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: todo-app
   namespace: rafalcraft
-  labels:
-    app: nginx
 spec:
-  replicas: 2
   selector:
     matchLabels:
-      app: nginx
+      app: todo-app
+  replicas: 2
   template:
     metadata:
       labels:
-        app: nginx
+        app: todo-app
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
+      - name: todo-app
+        image: todo-app:latest
+        imagePullPolicy: Never
         ports:
-        - containerPort: 80
+        - containerPort: 3000
+        envFrom:
+        - configMapRef:
+            name: mongodb-configmap
+        env:
+        - name: MONGO_ROOT_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongo-root-username
+        - name: MONGO_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongo-root-password
