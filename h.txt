@@ -1,0 +1,1000 @@
+ 1012  docker --debug
+ 1013  ls
+ 1014  cd Downloads
+ 1015  ls
+ 1016  cd test
+ 1017  ls
+ 1018  cd mission
+ 1019  ls
+ 1020  cd gettin-started-app
+ 1021  cd getting-started-app
+ 1022  ls
+ 1023  docker build -t getting-started .
+ 1024  sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove
+ 1025  docker --help
+ 1026  docker update
+ 1027  sudo reboot
+ 1028  docker build -t getting-started .
+ 1029  docker run --help
+ 1030  docker run -d -p 127.0.0.1:3003:3003 getting-started
+ 1031  ls
+ 1032  cd ..
+ 1033  ls
+ 1034  mkdir app
+ 1035  ls
+ 1036  cd app
+ 1037  ls
+ 1038  touchDockerfile
+ 1039  touch Dockerfile
+ 1040  ls
+ 1041  echo "FROM node:21-alpine" > Dockerfile
+ 1042  cat Dockerfile
+ 1043  echo "FROM node:20-alpine" > Dockerfile
+ 1044  cat Dockerfile
+ 1045  echo "FROM node:21-alpine" >> Dockerfile
+ 1046  cat Dockerfile
+ 1047  echo "FROM node:21-alpine" >>> Dockerfile
+ 1048  echo "FROM node:21-alpine" > Dockerfile
+ 1049  cat Dockerfile
+ 1050  echo "WORKDIR /app" >> Dockerfile
+ 1051  cat Dockerfile
+ 1052  echo "COPY . ." >> Dockerfile
+ 1053  echo "RUN npm install --production" >> Dockerfile
+ 1054  cat Dockerfile
+ 1055  echo 'CMD ["node", "app.js"]' >> Dockerfile
+ 1056  cat Dockerfile
+ 1057  ls
+ 1058  touch app.js
+ 1059  ls
+ 1060  cat Dockerfile
+ 1061  echo "EXPOSE 3000" >> Dockerfile
+ 1062  cat Dockerfile
+ 1063  docker build -t gettind-started .
+ 1064  open Dockerfile
+ 1065  open open.js
+ 1066  open app.js
+ 1067  touch app.js
+ 1068  ls
+ 1069  cat app.js
+ 1070  npm i 
+ 1071  cat Dockerfile
+ 1072  open Dockerfile
+ 1073  docker build -t gettind-started .
+ 1074  npm init -y
+ 1075  open package.json
+ 1076  npm i express mongo mongoose mongo-express mongodb path os
+ 1077  open package.json
+ 1078  npm install express mongo-express mongoose mongodb
+ 1079  ls
+ 1080  open package.json
+ 1081  npm install
+ 1082  cd getting-started-app
+ 1083  ls
+ 1084  docker ps
+ 1085  docker inages
+ 1086  docker images
+ 1087  ls
+ 1088  npm install
+ 1089  npm i mongodb
+ 1090  npm init
+ 1091  npm i express
+ 1092  npm install express mongo-express mongoose mongodb
+ 1093  npm install express mongo-express mongoose
+ 1094  npm install mongoose
+ 1095  npm run start
+ 1096  npm fund
+ 1097  docker build -t app .
+ 1098  docker run -d -p 127.0.0.1:3000:3000 app
+ 1099  touch app-deployment.yaml
+ 1100  docker build -t rafalinit/my-app:latest
+ 1101  touch mongo-deployment.yaml
+ 1102  docker build -t rafalinit/my-app:latest .
+ 1103  docker login
+ 1104  docker push rafalinit/my-app:latest
+ 1105  kubectl apply -f mongo-deployment.yaml
+ 1106  kubectl config view
+ 1107  kubectl config corrent-context
+ 1108  kubectl config corrent-contextkubectl config current-context
+ 1109  kubectl config current-context
+ 1110  kubectl apply -f app-deployment.yaml
+ 1111  ls
+ 1112  kubectl get pods
+ 1113  kubectl get services
+ 1114  npm i path
+ 1115  ls
+ 1116  ls -a
+ 1117  cd .npm
+ 1118  ls
+ 1119  cd _logs
+ 1120  ls
+ 1121  cd ..
+ 1122  cd _logs
+ 1123  cat 2024-11-12T05_29_38_530Z-debug-0.log
+ 1124  cd ..
+ 1125  sudo rm -rf _logs
+ 1126  ls
+ 1127  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+ 1128  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+ 1129  ~
+ 1130  minikube start
+ 1131  ls
+ 1132  cd minikube-linux-amd64
+ 1133  cat minikube-linux-amd64
+ 1134  sudo reboot
+ 1135  kubectp apply -f nginx-deployment.yaml
+ 1136  kubectl apply -f nginx-deployment.yaml
+ 1137  kubectl get pod
+ 1138  kubectl get deployment
+ 1139  kubectl apply -f nginx-deployment.yaml
+ 1140  kubectl get pod
+ 1141  kubectl get deployment
+ 1142  kubectl get pod
+ 1143  kubectl delete nginx-deployment-54b9c68f67-s7qm9
+ 1144  kubectl delete nginx-deployment
+ 1145  kubectl apply -f deployment nginx-deployment-54b9c68f67-s7qm9
+ 1146  kubectl apply -f deployment nginx-deployment
+ 1147  kubectl delete nginx-deployment nginx-deployment-54b9c68f67-s7qm9
+ 1148  kubectl delete nginx-deployment nginx-deployment
+ 1149  kubectl get pod
+ 1150  kubectl apply -f deployment nginx-deployment
+ 1151  kubectl get pod
+ 1152  kubectl apply -f deployment nginx-depl
+ 1153  kubectp apply -f nginx-deployment.yaml
+ 1154  kubectl apply -f nginx-deployment.yaml
+ 1155  kubectl get pod
+ 1156  touch nginx-service.yaml
+ 1157  kubectl apply -f nginx-deployment.yaml
+ 1158  kubectl apply -f nginx-service.yaml
+ 1159  kubectl get pod
+ 1160  kubectl apply -f nginx-service.yaml
+ 1161  kubectl get pod
+ 1162  kubectl delete deployment nginx-depl
+ 1163  kubectl get pod
+ 1164  kubectl get service
+ 1165  kubectl describe service
+ 1166  kubectl describe service nginx-service
+ 1167  ls
+ 1168  kubectl get service
+ 1169  kubectl get pod
+ 1170  kubectl apply -f mongo.yaml
+ 1171  kubectl get pod
+ 1172  kubectl get service
+ 1173  kubectl get pod
+ 1174  kubectl get pod --watch
+ 1175  kubectl get pod
+ 1176  kubectl apply -f mongo.yaml
+ 1177  kubectl get pod
+ 1178  kubectl get service
+ 1179  kubectl apply -f mongo.yaml
+ 1180  kubectl get service
+ 1181  kubecrl describe mongodb-service
+ 1182  kubectl describe mongodb-service
+ 1183  kubectl get service
+ 1184  kubectl describe mongodb-service
+ 1185  kubectl describe servive mongodb-service
+ 1186  kubectl describe service mongodb-service
+ 1187  kubectl get pod -o wide
+ 1188  kubectl get all | grep mongodb
+ 1189  git init
+ 1190  git add .
+ 1191  git commit -m "initiate mod"
+ 1192  git branch -M main
+ 1193  git remote add origin https://github.com/RafalW3bCraft/demo-d-k.git
+ 1194  git push -u origin main
+ 1195  minikube service mongo-express-service
+ 1196  kubectl get pod
+ 1197  git status
+ 1198  git add .
+ 1199  git commit -m "initialize mod 1"
+ 1200  git push -u origin main
+ 1201  git add .
+ 1202  git commit -m "initialize mod 1.0"
+ 1203  git push -u origin main
+ 1204  git status
+ 1205  kubectl apply -f mongodb-configmap.yaml
+ 1206  kubectl apply -f mongo-express.yaml
+ 1207  kubectl get pod
+ 1208  kubectl logs
+ 1209  kubectl logs mongo-express
+ 1210  kubectl logs mongo-express-85d8576d55-sj2ff
+ 1211  git status
+ 1212  git add .
+ 1213  git commit -m "initialization mod 1.1"
+ 1214  git push -u origin main
+ 1215  kubectl apply -f mongo-express.yaml
+ 1216  kubectl get service
+ 1217  git status
+ 1218  git add .
+ 1219  git status
+ 1220  git commint -m "initialization mod make external service with type: LoadBalancer also need nodePort in range"
+ 1221  git comint -m "initialization mod make external service with type: LoadBalancer also need nodePort in range"
+ 1222  git commit -m "initialization mod make external service with type: LoadBalancer also need nodePort in range"
+ 1223  git push -u origin main
+ 1224  git status
+ 1225  git add .
+ 1226  git commit -m "initialization mod make external service with type: LoadBalancer also need nodePort in range 30000"
+ 1227  git push -u origin main
+ 1228  kubectl get service
+ 1229  minikube service mongo-express-service
+ 1230  minikube tunnel
+ 1231  ls
+ 1232  git status
+ 1233  git add .
+ 1234  git commit -m "initialize database login"
+ 1235  git push -u origin main
+ 1236  kubectl apply -f mongodb-configmap.yaml
+ 1237  kubectl create namespace rafalcraft
+ 1238  kubectl apply -f mongodb-configmap.yaml
+ 1239  kubectl get pod
+ 1240  kubectl get service
+ 1241  kubectl get deployment
+ 1242  kubectl get config
+ 1243  kubectl get configmap
+ 1244  minikube addons enable ingres
+ 1245  minikube addons enable ingress
+ 1246  kubectl get ns
+ 1247  kubectl get pods
+ 1248  kubectl get all -n rafalcraft
+ 1249  clear
+ 1250  ls
+ 1251  kubectl apply -g nginx-deployment.yaml
+ 1252  kubectl apply -f nginx-deployment.yaml
+ 1253  kubectl apply -f nginx-service.yaml
+ 1254  ls
+ 1255  kubectl apply -f mongo.yaml
+ 1256  kubectl apply -f mongo-express.yaml
+ 1257  kubectl apply -f mongodb-configmap.yaml
+ 1258  kubectl apply -f mongo-secret.yaml
+ 1259  minikube service mongo-express-service
+ 1260  clear
+ 1261  ls
+ 1262  git status
+ 1263  kubectl get pod
+ 1264  git status
+ 1265  git add .
+ 1266  git commit -m "initialization conti.."
+ 1267  git push -u origin
+ 1268  git push -u origin main
+ 1269  ls
+ 1270  kubectl get service
+ 1271  kubectl apply -f dashboard-ingress.yaml
+ 1272  kubectl get ingress -n rafalcraft
+ 1273  kubectl get ingress -n dashboard-ingress
+ 1274  kubectl get ingress -n dashboard-ingress.yaml
+ 1275  kubectl ap
+ 1276  kubectl get ingress -n rafalcraft
+ 1277  kubectl get ingress -n dashboard-ingress
+ 1278  kubectl get ingress -n rafalcraft
+ 1279  kubectl get ingress -n rafalcraft --watch
+ 1280  sudo vim /etc/hosts
+ 1281  sudo cat /etc/hosts
+ 1282  sudo vim /etc/hosts
+ 1283  sudo cat /etc/hosts
+ 1284  sudo vim /etc/hosts
+ 1285  sudo cat /etc/hosts
+ 1286  kubectl get ingress -n rafalcraft --watch
+ 1287  sudo vim /etc/hosts
+ 1288  sudo cat /etc/hosts
+ 1289  ping 192.168.49.2
+ 1290  kubectl get ingress -n rafalcraft
+ 1291  kubectl apply -f dashboard-ingress.yaml
+ 1292  kubectl get pod
+ 1293  kubectl get service
+ 1294  kubectl get deployment
+ 1295  kubectl get configmap
+ 1296  kubectl get ingress
+ 1297  minikube ip
+ 1298  minikube tunnel
+ 1299  curl http://rafalcraft.com
+ 1300  minikube ip
+ 1301  curl -v rafalcraft.com
+ 1302  kubectls get pod
+ 1303  kubectl get pod
+ 1304  kubectl get services
+ 1305  minicube start
+ 1306  minikube start
+ 1307  kubectl get pod
+ 1308  kubectl get services
+ 1309  kubectl create -help
+ 1310  kubectl create --help
+ 1311  kubectl create deployment nginx-depl --image=nginx
+ 1312  kubectl get pod
+ 1313  kubectl get service
+ 1314  kubectl get pod
+ 1315  kubectl get replicaset
+ 1316  kubectl get deployment
+ 1317  kubectl logs nginx-depl-5796b5c499-86rwj
+ 1318  kubectl create deployment mongo-depl --image=mongo
+ 1319  kubectl get pod
+ 1320  kubectl logs mongo-depl-67d7db846c-k9dll
+ 1321  kubectl get pod
+ 1322  clear
+ 1323  kubectl get pod
+ 1324  kubectl exec
+ 1325  kubectl exec -it mongo-depl-67d7db846c-k9dll
+ 1326  kubectl exec -it mongo-depl-67d7db846c-k9dll -- bin/bash
+ 1327  kubectl get deployment
+ 1328  kubectl delete deployment mongo-depl-67d7db846c-k9dll
+ 1329  kubectl delete deployment mongo-depl
+ 1330  kubectl get deployment
+ 1331  kubectl get pod
+ 1332  kubectl get replicaset
+ 1333  kubectl apply -f nginx-deployment.yaml
+ 1334  ls
+ 1335  cd Downloads
+ 1336  ls
+ 1337  cd test
+ 1338  ls
+ 1339  cd mission
+ 1340  ls
+ 1341  touch nginx-deployment.yaml
+ 1342  code
+ 1343  kubectl get deployment
+ 1344  kubectl get pod
+ 1345  kubectl delete deployment nginx-deployment
+ 1346  kubectl get pod
+ 1347  kubectl delete deployment nginx-deployment
+ 1348  kubectl get pod
+ 1349  kubectl get pod -o wide
+ 1350  kubectl get deployment nginx-deployment -o yaml 
+ 1351  kubectl get deployment nginx-deployment -o yaml > nginx-deployment-result
+ 1352  kubectl delete -f nginx-deployment.yaml
+ 1353  kubectl delete -f nginx-service.yaml
+ 1354  kubectl get pod
+ 1355  kubectl get service
+ 1356  kubectl get deployment
+ 1357  kubectl get all
+ 1358  echo -n 'username' | base64
+ 1359  echo -n 'password' | base64
+ 1360  clear
+ 1361  cd k8x-configuration
+ 1362  kubectl get secret
+ 1363  ls
+ 1364  kubectl apply -f mongo-secret.yaml
+ 1365  kubectl get secret
+ 1366  kubectl get service
+ 1367  kubctl describe service mongodb-service
+ 1368  kubectl describe service mongodb-service
+ 1369  kubectl get pod -o wide
+ 1370  kubectl get all | grep mongodb
+ 1371  clear
+ 1372  kubectl get all | grep mongodb
+ 1373  kubectl get pod -o wide
+ 1374  kubectl describe service mongodb-service
+ 1375  kubectl get pod
+ 1376  kubectl get service
+ 1377  kubectl get deployment
+ 1378  kubectl get namespace
+ 1379  kubect cluster-info
+ 1380  kubectl cluster-info
+ 1381  kubectl get config map
+ 1382  kubectl apply -f 
+ 1383  kubectl get namespace
+ 1384  ls
+ 1385  kubectl apply -f mongodb-configmap.yaml --namespace=rafalcraft-namespace
+ 1386  kubectl apply -f mongodb-configmap.yaml --namespace=rafalcraft
+ 1387  sudo apt install kubectx
+ 1388  kubens
+ 1389  kubens rafalcraft
+ 1390  minikube addons enable inngress
+ 1391  minikube addons enable ingress
+ 1392  kubectl get pod
+ 1393  ls
+ 1394  kubectl apply -f nginx-deployment.yaml
+ 1395  kubectl apply -f nginx-service.yaml
+ 1396  kubectl apply -f mongo.yaml
+ 1397  kubectl apply -f mongo-secret.yaml
+ 1398  kubectl apply -f mongo-express.yaml
+ 1399  kubectl apply -f mongodb-configmap.yaml
+ 1400  kubectl apply -f mongo-express.yaml
+ 1401  kubectl apply -f mongodb-configmap.yaml
+ 1402  kubectl apply -f mongo-express.yaml
+ 1403  kubectl get pod
+ 1404  kubectl get service
+ 1405  minikube apply 0f mongo-express-service
+ 1406  minikube apply -f mongo-express-service
+ 1407  minikube service mongo-express-service
+ 1408  clear
+ 1409  kubectl get all
+ 1410  ls
+ 1411  kubectl apply -f dashboard-ingress.yaml
+ 1412  kubectl get pods -n kube-system -l app.kubernetes.io/name=ingress-nginx
+ 1413  minikube addons enable ingress
+ 1414  kubectl port-forward svc/nginx-service 8080:80
+ 1415  kubectl get pods -n kube-system -l app.kubernetes.io/name=ingress-nginxminikube addons disa
+ 1416  kubectl get ingress -n rafalcraft
+ 1417  kubectl logs -n kube-system -l app.kubernetes.io/name=ingress-nginx
+ 1418  minikube addon disable ingress
+ 1419  minikube addons disable ingress
+ 1420  minikube addons ENable ingress
+ 1421  minikube addons enable ingress
+ 1422  kubectl get pods -n rafalcraft -l app.kubernetes.io/name=ingress-nginx
+ 1423  kubectl get pods -n rafalcraft
+ 1424  minikube stop
+ 1425  minikube start
+ 1426  kubectl get pods -n rafalcraft -l app.kubernetes.io/name=ingress-nginx
+ 1427  kubectl get pods -n kube-system -l app.kubernetes.io/name=ingress-nginx
+ 1428  kubectl get svc -n kube-system -l app.kubernetes.io/name=ingress-nginx
+ 1429  minikube tunnel
+ 1430  kubectl get pods -n rafalcraft
+ 1431  kubectl get service -n rafalcraft
+ 1432  kubectl get deployment -n rafalcraft
+ 1433  kubectl get configmap -n rafalcraft
+ 1434  kubectl get ingress -n rafalcraft
+ 1435  sudo nano /etc/hosts
+ 1436  sudo cat /etc/hosts
+ 1437  minikube tunnel
+ 1438  sudo cat /etc/hosts
+ 1439  kubectl describe ingress dashboard-ingress -n rafalcraft
+ 1440  kubectl rollout restart deployment ingress-nginx-controller -n kube-system
+ 1441  kubectl apply -f dashboard-ingress.yaml
+ 1442  kubectl describe ingress dashboard-ingress -n rafalcraft
+ 1443  curl -v https://rafalcraft.com
+ 1444  minikube tunnel
+ 1445  kubectl apply -f dashboard-ingress.yaml
+ 1446  kubectl describe ingress dashboard-ingress -n rafalcraft
+ 1447  kubectl apply -f dashboard-ingress.yaml
+ 1448  kubectl get ingress -n rafalcraft
+ 1449  sudo cat /etc/hosts
+ 1450  kubectl describe ingress dashboard-ingress -n rafalcraft
+ 1451  minikube addons enable ingress
+ 1452  minikube start
+ 1453  minikube tunnel
+ 1454  minikube tunnelkubectl get service
+ 1455  kubectl get service
+ 1456  minikube service mongo-express-service
+ 1457  minikube addons enable ingress
+ 1458  kubectl get pods -n kube-system -l app.kubernetes.io/name=ingress-nginx
+ 1459  kubectl apply -f rafalcraft-ingress.yaml -n rafalcraft
+ 1460  kubectl logs -n kube-system -l app.kubernetes.io/name=ingress-nginx
+ 1461  kubectl describe ingress rafalcraft-ingress -n rafalcraft
+ 1462  kubectl apply -f mongo-ingress.yaml -n rafalcraft
+ 1463  kubectl apply -f mongo-ingress.yaml
+ 1464  kubectl get pod
+ 1465  kubectl get service
+ 1466  kubectl get deployment
+ 1467  kubectl get configmap
+ 1468  kubectl get ingress
+ 1469  kubectl service ingress
+ 1470  kubectl describe service ingress
+ 1471  kubectl apply -f mongo-ingress.yaml
+ 1472  kubectl get ingress
+ 1473  kubectl get pods -n kube-system
+ 1474  kubectl get pods -n kube-system | grep nginx-ingress-controller
+ 1475  kubectl create namespace rafalcraft
+ 1476  kubectl apply -f mongo-secret.yaml && kubectl apply -f mongodb-configmap.yaml && kubectl apply -f mongo.yaml && kubectl apply -f mongo-express.yaml && kubectl apply -f nginx-deployment.yaml && kubectl apply -f nginx-service.yaml && kubectl apply -f mongo-ingress.yaml
+ 1477  kubectl apply -f mongo-secret.yaml
+ 1478  kubectl get all -n rafalcraft
+ 1479  kubectl get ingress -n rafalcraft
+ 1480  git status
+ 1481  rm text.txt
+ 1482  ls
+ 1483  git status
+ 1484  git add .
+ 1485  git commit -m "initialization chellanging commit mod"
+ 1486  git push -u origin main
+ 1487  minikube 
+ 1488  minikube service mongo-express-service
+ 1489  sudo nano /etc/hosts
+ 1490  sudo cat /etc/hosts
+ 1491  minikube tunnel
+ 1492  sudo nano /etc/hosts
+ 1493  sudo cat /etc/hosts
+ 1494  minikube tunnel
+ 1495  kubectl service mongo-express-service
+ 1496  minikube service mongo-express-service
+ 1497  clear
+ 1498  history
+ 1499  python bot-1.py
+ 1500  python bot-2.py
+ 1501  git init
+ 1502  git add .
+ 1503  git commit -m "initiate mod"
+ 1504  ls -a
+ 1505  rm rf .git
+ 1506  sudo rm rf .git
+ 1507  rm .git
+ 1508  sudo rmdir .git
+ 1509  sudo rm -rf .git
+ 1510  ls -a
+ 1511  git init
+ 1512  git add .
+ 1513  git commit -m "initiate mod"
+ 1514  git branch -M main
+ 1515  git remote add origin https://github.com/RafalW3bCraft/tele-bot-py.git
+ 1516  git push -u origin main
+ 1517  git init
+ 1518  git add .
+ 1519  git commit -m "first commit"
+ 1520  git status
+ 1521  git push -u origin main
+ 1522  git remote add origin https://github.com/RafalW3bCraft/tele-bot-py.git
+ 1523  git config --global user.name "RafalW3bCraft"
+ 1524  git config --global user.email "seb.baadi@hotmail.com"
+ 1525  git push -u origin main
+ 1526  git pull Rafalco@13
+ 1527  git pull https://github.com/RafalW3bCraft/tele-bot-py.git
+ 1528  git branch
+ 1529  git fetch https://github.com/RafalW3bCraft/tele-bot-py.git
+ 1530  git push -u origin main
+ 1531  python bot-3.py
+ 1532  python bot-send-msg.py
+ 1533  python bot-auto-msg.py
+ 1534  git status
+ 1535  git add .
+ 1536  git commit -m "initialized mod-1"
+ 1537  git push -u origin main
+ 1538  python bot-img-send.py
+ 1539  git status
+ 1540  git add .
+ 1541  git status
+ 1542  git commit -m "initialize mod-2"
+ 1543  git status
+ 1544  git branch
+ 1545  git remote
+ 1546  git push -u origin main
+ 1547  python bot-music-send.py
+ 1548  git status
+ 1549  git add .
+ 1550  git commit -m "initilize mod-3"
+ 1551  git status
+ 1552  git add .
+ 1553  git commit -m "initilize mod-3"
+ 1554  python bot-read-reply.py
+ 1555  git add .
+ 1556  git commit -m "initilize mod-4"
+ 1557  python bot-engage.py
+ 1558  git add .
+ 1559  git commit -m "initilize mod-5"
+ 1560  git init
+ 1561  git add .
+ 1562  git status
+ 1563  git commit -m "initialize ex"
+ 1564  git branch -M main
+ 1565  git push -u origin main
+ 1566  git remote add origin https://github.com/RafalW3bCraft/master-extentions.git
+ 1567  git push -u origin main
+ 1568  ~
+ 1569  cd ~
+ 1570  ls
+ 1571  python3 -m venv ex-py-env
+ 1572  source ex-py-env/bin/activate
+ 1573  pip install selenium
+ 1574  pip install telegram-bot
+ 1575  pip install webdriver-manager
+ 1576  pip freeze > requirements.txt
+ 1577  ls
+ 1578  pip install     python-telegram-bot     instabot     tweepy     linkedin-api     discord.py     replit
+ 1579  pip freeze > requirements.txt
+ 1580  ls
+ 1581  mv requirements.txt /home/rafal/ex-py-env
+ 1582  ls
+ 1583  cat ex-py-env
+ 1584  cd ex-py-env
+ 1585  ls
+ 1586  clear
+ 1587  /
+ 1588  ls
+ 1589  cd ~
+ 1590  ls
+ 1591  cd Downloads
+ 1592  ls
+ 1593  cd test
+ 1594  ls
+ 1595  mkdir link-api
+ 1596  cd linkapi
+ 1597  cd link-api
+ 1598  ls
+ 1599  touch link-connect.py
+ 1600  ls -l
+ 1601  chmod +x link-connect.py
+ 1602  ls
+ 1603  sudo mousepad link-connect.py
+ 1604  ls
+ 1605  cat link-connect.py
+ 1606  python link-connect.py
+ 1607  sudo mousepad link-connect.py
+ 1608  python link-connect.py
+ 1609  pip install selenium
+ 1610  python -m venv --help
+ 1611  sudo apt install python3-venv
+ 1612  python3 -m venv ex-py-env
+ 1613  pwd
+ 1614  ls
+ 1615  rm ex-py-env
+ 1616  rm -rf ex-py-env
+ 1617  ls
+ 1618  sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
+ 1619  clear
+ 1620  ls
+ 1621  python link-connect.py
+ 1622  chrome://settings/help
+ 1623  wget https://chromedriver.storage.googleapis.com/130.0.6723.91/chromedriver_linux64.zip
+ 1624  wget https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+ 1625  ls
+ 1626  unzip chromedriver_linux64.zip
+ 1627  ls
+ 1628  sudo mv chromedriver /usr/local/bin
+ 1629  ls
+ 1630  rm LICENSE.chromedriver
+ 1631  ls
+ 1632  clear
+ 1633  sudo chmod +x /usr/local/bin/chromedriver
+ 1634  ls
+ 1635  lschromedriver --version
+ 1636  chromedriver --version
+ 1637  pip install webdriver-manager
+ 1638  sudo rm -rf /usr/local/bin/chromedriver
+ 1639  sudo ls /usr/local/bin/chromedriver
+ 1640  sudo ls /usr/local/bin/
+ 1641  cleaer
+ 1642  clear
+ 1643  cd ~
+ 1644  ls
+ 1645  source /ex-py/env
+ 1646  source /ex-py/env/bin/activate
+ 1647  source ex-py-env/bin/activate
+ 1648  cd ex-py-env
+ 1649  ls
+ 1650  pip install python-dotenv requests asyncio
+ 1651  pip install scikit-learn
+ 1652  pip install scikit-learn tensorflow torch transformers nltk spacy opencv-python mediapipe pyautogui fastapi flask requests pandas numpy openai langchain
+ 1653  pip install scikit-learn xgboost lightgbm catboost tensorflow torch torchvision torchaudio transformers nltk spacy opencv-python mediapipe imageio pillow stable-baselines3 gym pyautogui apache-airflow schedule fastapi uvicorn flask requests httpx dagster prefect pandas numpy openai langchain
+ 1654  ls
+ 1655  sudo rm -rf bin
+ 1656  sudo rm -rf include
+ 1657  sudo rm -rf lib
+ 1658  sudo rm -rf lib64
+ 1659  sudo rm -rf LICENSE
+ 1660  ls
+ 1661  pip install requirements.txt
+ 1662  pip -i requirements.txt
+ 1663  pip install -r requirements.txt
+ 1664  rm requirements.txt
+ 1665  ls
+ 1666  pip install python-telegram-bot instabot tweepy linkedin-api discord.py replit selenium requests python-dotenv asyncio webdriver-manager
+ 1667  deactivate
+ 1668  source ex-py-env/bin/activate
+ 1669  cd ..
+ 1670  ls
+ 1671  source ex-py-env/bin/activate
+ 1672  python3 -m venv ex-py-env
+ 1673  ls
+ 1674  source ex-py-env/bin/activate
+ 1675  cd ex-py-env
+ 1676  ls
+ 1677  pip install python-telegram-bot instabot tweepy linkedin-api discord.py replit selenium requests python-dotenv asyncio webdriver-manager
+ 1678  clear
+ 1679  ls
+ 1680  du -sh /home/rafal/ex-py-env
+ 1681  clear
+ 1682  pip freeze > requirements.txt
+ 1683  ls
+ 1684  cd ~
+ 1685  ls
+ 1686  cd Downloads
+ 1687  ls
+ 1688  cd test
+ 1689  ls
+ 1690  ls -a
+ 1691  ls -l
+ 1692  deactivate
+ 1693  sudo apt installimagemagick
+ 1694  sudo apt install imagemagick
+ 1695  mogrify -strip one.jpg
+ 1696  mogrify -strip two.jpg /
+ 1697  mogrify -strip two.jpg three.jpg four.jpg five.jpg six.jpg seven.jpg eigth.jpg nine.jpg
+ 1698  sudo apt install libimage-exiftool-perl
+ 1699  exiftool one.jpg
+ 1700  mogrify -strip one.jpg
+ 1701  exiftool one.jpg
+ 1702  exiftool -all= one.jpg
+ 1703  exiftool one.jpg
+ 1704  ls
+ 1705  exiftool IMG_20241119_101027_411.jpg
+ 1706  gimp one.jpg
+ 1707  inkscape one.jpg
+ 1708  inkscape image.jpg
+ 1709  inkscape one.jpg
+ 1710  inkscape two.jpg
+ 1711  ls
+ 1712  touch index.html
+ 1713  sudo mousepad index.html
+ 1714  xdg-open index.html
+ 1715  sudo apt install potrace
+ 1716  convert three.jpg three.pbm && convert four.jpg four.pbm && convert five.jpg five.pbm && convert six.jpg six.pbm && convert seven.jpg seven.pbm && convert eight.jpg eigth.pbm
+ 1717  ls
+ 1718  convert eigth.jpg eigth.pbm
+ 1719  convert two.jpg two.pbm && convert nine.jpg nine.pbm
+ 1720  convert two.pbm two.svg && convert three.pbm three.svg && convert four.pbm four.svg && convert five.pbm five.svg && convert six.pbm six.svg && convert seven.pbm seven.svg && convert eigth.pbm eight.svg && convert nine.pbm nine.svg
+ 1721  convert three.jpg three.pbm && convert four.jpg four.pbm && convert five.jpg five.pbm && convert six.jpg six.pbm && convert seven.jpg seven.pbm && convert eight.jpg eight.pbm && convert two.jpg two.svg && conver nine.jpg nine.svg
+ 1722  convert three.jpg three.ico && convert four.jpg four.ico && convert five.jpg five.ico && convert six.jpg six.ico && convert seven.jpg seven.ico && convert eight.jpg eight.ico && convert two.jpg two.svg && convert nine.jpg nine.svg
+ 1723  convert one.jpg -resize 256x256 one.ico && convert two.jpg -resize 256x256 two.ico && convert three.jpg -resize 256x256 three.ico && convert four.jpg -resize 256x256 four.ico && convert five.jpg -resize 256x256 five.ico && convert six.jpg -resize 256x256 six.ico && convert seven.jpg -resize 256x256 seven.ico && convert eight.jpg -resize 256x256 eight.ico && convert two.jpg -resize 256x256 two.ico && convert nine.jpg --resize 256x256 nine.ico
+ 1724  convert eigth.jpg --resize 256x256 eigth.ico
+ 1725  clear
+ 1726  history
+ 1727  ls
+ 1728  touch text.txt
+ 1729  ls
+ 1730  sudo mousepad text.txt
+ 1731  sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove
+ 1732  ls
+ 1733  touch new.txt
+ 1734  mousepad new.txt
+ 1735  ls
+ 1736  rm new.txt
+ 1737  ls
+ 1738  clear
+ 1739  ls
+ 1740  clear
+ 1741  ls
+ 1742  minikube tunnel
+ 1743  clear
+ 1744  history | grep "bluetooth"
+ 1745  sudo systemctl start bluetooth
+ 1746  sudo apt update && sudo apt full-upgrade -y
+ 1747  sudo systemctl stop bluetooth
+ 1748  sudo apt autoremove
+ 1749  sudo apt autoclean
+ 1750  clear
+ 1751  docker ps
+ 1752  docker --help
+ 1753  docker ps
+ 1754  sudo reboot
+ 1755  minikube tunnel
+ 1756  history | grep "clear"
+ 1757  history | grep "bluetoothctl"
+ 1758  ls
+ 1759  history > net.txt | grep "bluetoothctl"
+ 1760  ls
+ 1761  cat net.txt
+ 1762  net.txt | grep "blutoothctl"
+ 1763  net.txt | grep "clear"
+ 1764  rm net.txt
+ 1765  ls
+ 1766  history | grep "sudo apt"
+ 1767  history | grep "ctl"
+ 1768  clear
+ 1769  sourve /ex-py-env/bin/activate
+ 1770  kubectl get pod
+ 1771  kubectl get services
+ 1772  kubectl getdeployment
+ 1773  kubectl get deployment
+ 1774  kubectl get configmap
+ 1775  minikube --help
+ 1776  minikube image
+ 1777  minikube image l
+ 1778  minikube image ls
+ 1779  minicube addons enable ingress
+ 1780  minikube addons enable ingress
+ 1781  kubectl get ns
+ 1782  kubectl get all -n rafalcraft
+ 1783  kubectl get ns
+ 1784  kubectl get all -n ingress-nginx
+ 1785  kubectl apply -f mongo-ingress.yaml
+ 1786  kubectl get ingress -n rafalcraft
+ 1787  sudo cat /etc/hosts
+ 1788  sudo nano /etc/hosts
+ 1789  kubectl describe ingress dashboard-ingress -n rafalcraft
+ 1790  kubectl apply -f mongo-ingress.yaml
+ 1791  sudo nano /etc/hosts
+ 1792  clear
+ 1793  kubectl apply --help
+ 1794  kubectl get ingress -n rafalcraft
+ 1795  kubectl get svc
+ 1796  kubectl get svc -n rafalcraft
+ 1797  kubectl get 
+ 1798  kubectl get deployments -n rafalcraft
+ 1799  kubectl get pods -n rafalcraft
+ 1800  kubectl delete ingress dashboard-ingress -n rafalcraft
+ 1801  kubectl get svc -n rafalcraft
+ 1802  kubectl delete svc default-http-backend -n rafalcraft
+ 1803  kubectl get deployments -n rafalcraft
+ 1804  kubectl get ingress -n rafalcraft
+ 1805  kubectl get svc -n rafalcraft
+ 1806  kubectl get deployment -n rafalcraft
+ 1807  kubectl get pods -n rafalcraft
+ 1808  ls
+ 1809  kubectl get all -n rafalcraft
+ 1810  kubectl delete service mongodb-service
+ 1811  kubectl get all -n rafalcraft
+ 1812  kubectl delete service nginx-service
+ 1813  kubectl get all -n rafalcraft
+ 1814  kubectl delete service mongo-express-service
+ 1815  kubectl delete deployment mongo-express
+ 1816  kubectl delete deployment mongodb-deployment
+ 1817  kubectl delete deployment nginx-deployment
+ 1818  kubectl get all -n rafalcraft
+ 1819  kubectl get all
+ 1820  kubectl delete service mongodb-service -n rafalcraft
+ 1821  kubectl delete service nginx-service -n rafalcraft
+ 1822  kubectl get all -n rafalcraft
+ 1823  kubectl delete service mongo-express-service -n rafalcraft
+ 1824  kubectl get all -n rafalcraft
+ 1825  kubectl delete deployment mongo-express -n rafalcraft
+ 1826  kubectl delete deployment mongodb-deployment -n rafalcraft
+ 1827  kubectl delete deployment nginx-deployment -n rafalcraft
+ 1828  kubectl get all -n rafalcraft
+ 1829  kubectl get all 
+ 1830  kubectl get pod
+ 1831  kubectl get service
+ 1832  kubectl get deployment
+ 1833  kubectl get configmap
+ 1834  kubectl delete configmap mongodb-configmap -n rafalcraft
+ 1835  kubectl get configmap -n rafalcraft
+ 1836  kubectl get configmap
+ 1837  kubectl delete configmap mongodb-configmap
+ 1838  kubectl get secret
+ 1839  kubectl apply -f mongo.yaml
+ 1840  kubectl get deployments
+ 1841  kubectl get all
+ 1842  kubectl get deployments -n rafalcraft
+ 1843  kubectl get all -n rafalcraft
+ 1844  kubectl get deployments -n rafalcraft
+ 1845  kubectl apply -f nginx-deployment.yaml
+ 1846  kubectl apply -f nginx-service.yaml
+ 1847  kubectl get deployments
+ 1848  kubectl get deployments -n rafalcraft
+ 1849  kubectl get pods -n rafalcraft
+ 1850  kubectl get services -n rafalcraft
+ 1851  kubectl get service nginx
+ 1852  kubectl get service nginx -n rafalcraft
+ 1853  kubectl service nginx -n rafalcraft
+ 1854  kubectl service nginx
+ 1855  kubectl get services
+ 1856  kubectl get services -n rafalcraft
+ 1857  minikube service nginx
+ 1858  minikube service nginx -n rafalcraft
+ 1859  kubectl service todo-api
+ 1860  kubectl service nginx
+ 1861  kubectl service nginx -n rafalcraft
+ 1862  kubectl get service -n rafalcraft
+ 1863  ls
+ 1864  clear
+ 1865  kubectl apply -f mongo-secret.yaml
+ 1866  kubectl apply -f mongo-secret.yaml -n rafalcraft
+ 1867  npm init
+ 1868  npm init -y
+ 1869  npm i nodemon body-parser dotenv express mongoose
+ 1870  kubectl apply -f mongo-secret.yaml
+ 1871  kubectl apply -f mongo-configmap.yaml
+ 1872  kubectl apply -f mongodb-configmap.yaml
+ 1873  kubectl apply -f mongo-secret.yaml -n rafalcraft
+ 1874  kubectl apply -f nginx-service.yaml
+ 1875  kubectl apply -f nginx-deployment.yaml
+ 1876  kubectl get all
+ 1877  kubectl get all -n rafalcraft
+ 1878  kubectl delete deployment mongodb -n rafalcraft && kubectl delete deployment nginx -n rafalcraft && kubectl delete service mongodb -n rafalcraft && kubectl delete service nginx -n rafalcraft
+ 1879  kubectl get all -n rafalcraft
+ 1880  kubectl get configmap 
+ 1881  kubectl get configmap -n rafalcraft
+ 1882  kubectl delete configmap nginx-configmap -n rafalcraft
+ 1883  kubectl get configmap -n rafalcraft
+ 1884  kubectl get secret -n rafalcraft
+ 1885  kubectl delete secret mongodb-secret -n rafalcraft
+ 1886  kubectl apply -f mongo.yaml && kubectl apply -f nginx-deployment.yaml && kubectl apply -f nginx-service.yaml && kubectl apply -f mongodb-configmap.yaml && kubectl apply -f mongo-secret.yaml
+ 1887  \kubectl apply -f nginx-deployment.yaml && kubectl apply -f nginx-service.yaml && kubectl apply -f mongodb-configmap.yaml && kubectl apply -f mongo-secret.yaml
+ 1888  kubectl get all -n rafalcraft
+ 1889  kubectl apply -f nginx-deployment.yaml
+ 1890  kubectl apply -f nginx-service.yaml && kubectl apply -f mongodb-configmap.yaml && kubectl apply -f mongo-secret.yaml
+ 1891  kubectl apply -f mongo-secret.yaml
+ 1892  npm i nodemon body-parser dotenv express mongoose
+ 1893  .gitingnore
+ 1894  touch .gitignore
+ 1895  touch server,js
+ 1896  mv server,js server.js
+ 1897  kubectl expose deployment rafalcraft --type=LoadBalancer --port=3000 --target-port=3000
+ 1898  kubectl get services -n rafalcraft
+ 1899  docker run start
+ 1900  minikube service rafalcraft
+ 1901  minikube service nginx
+ 1902  history | grep "docker"
+ 1903  docker rub
+ 1904  docker run
+ 1905  docker run nginx
+ 1906  npm run start
+ 1907  history | grep "minikube"
+ 1908  minikube start
+ 1909  minikubw kubectl -- get pods -A
+ 1910  minikube kubectl -- get pods -A
+ 1911  minikubw service nginx
+ 1912  minikube service nginx
+ 1913  kubectl get service
+ 1914  minikube service nginx -n rafalcraft
+ 1915  kubectl apply -f mongo.yaml && kubectl apply -f nginx-deployment.yaml && kubectl apply -f nginx-service.yaml && kubectl apply -f mongodb-configmap.yaml && kubectl apply -f mongo-secret.yaml
+ 1916  docker build -t node-app .
+ 1917  kubectl get all -n rafalcraft
+ 1918  kubectl get pods -n rafalcraft -w
+ 1919  kubectl get svc -n rafalcraft
+ 1920  kubectl logs -f deployment/node-app -n rafalcraft
+ 1921  minikube service node-app -n rafalcraft
+ 1922  kubectl logs -f deployment/node-app -n rafalcraft
+ 1923  minikube service node-app -n rafalcraft
+ 1924  minikube start
+ 1925  minikube addons enable ingress
+ 1926  eval $(minikube docker-env)
+ 1927  docker build -t node-app:latest .
+ 1928  curl -X POST http://$NODE_APP_IP/api/items   -H "Content-Type: application/json"   -d '{"name":"Test Item","description":"Test Description"}'
+ 1929  kubectl set image deployment/node-app node-app=todo-app:latest -n rafalcraft
+ 1930  kubectl rollout status deployment/node-app -n rafalcraft
+ 1931  minikube service node-app -n rafalcraft
+ 1932  ls
+ 1933  kubectl delete -f nginx-deployment.yaml -f nginx-service.yaml -f mongo.yaml -f mongodb-configmap.yaml -f mongo-secret.yaml -n rafalcraft
+ 1934  kubectl get all
+ 1935  kubectl get all -n rafalcraft
+ 1936  kubectl delete -f nginx
+ 1937  kubectl delete -f nginx -n rafalcraft
+ 1938  kubectl delete service -f nginx -n rafalcraft
+ 1939  kubectl delete all --all -n rafalcraft
+ 1940  kubectl delete all --all 
+ 1941  kubectl get all -n rafalcraft
+ 1942  kubectl get all 
+ 1943  git status
+ 1944  git add .
+ 1945  git status
+ 1946  git commit -m "initialize main"
+ 1947  git status
+ 1948  git branch
+ 1949  git push -u origin main
+ 1950  ls
+ 1951  kubectl create namespace rafalcraft
+ 1952  kubectl apply -f mongodb-pvc.yaml
+ 1953  ls
+ 1954  touch mongodb-pvc.yaml
+ 1955  kubectl apply -f mongodb-pvc.yaml
+ 1956  kubectl get pvc -n rafalcraft
+ 1957  kubectl apply -f mongodb-pvc.yaml
+ 1958  minikube ip
+ 1959  minikube status
+ 1960  docker ps
+ 1961  kubectl get all
+ 1962  minikube status
+ 1963  kubectl create namespace rafalcraft
+ 1964  minikube status
+ 1965  minikube stop
+ 1966  minikube delete
+ 1967  docker ps
+ 1968  sudo systemctl start docker
+ 1969  minikube start --driver=docker
+ 1970  kubectl cluster-info
+ 1971  kubectl create namespace rafalcraft
+ 1972  kubectl apply -f mongodb-pvc.yaml
+ 1973  kubectl apply -f mongo-secret.yaml -f mongodb-configmap.yaml -f mongo.yaml
+ 1974  kubectl get all
+ 1975  kubectl get all -n rafalcraft
+ 1976  kubectl apply -f mongo-express.yaml
+ 1977  kubectl get all -n rafalcraft
+ 1978  docker build -t todo-app:latest
+ 1979  docker build -t todo-app:latest .
+ 1980  kubectl apply -f nginx-deployment.yaml -f nginx-service.yaml
+ 1981  kubectl get all -n rafalcraft
+ 1982  kubectl apply -f mongo-ingress.yaml
+ 1983  kubectl get all -n rafalcraft
+ 1984  kubectl get svc -n rafalcraft
+ 1985  kubectl get pods -n rafalcraft
+ 1986  kubectl get ingress -n rafalcraft
+ 1987  minikube service todo-app -n rafalcraft
+ 1988  kubectl get svc -n rafalcraft
+ 1989  minikube addons enable ingress
+ 1990  kubectl get svc -n rafalcraft
+ 1991  minikube service todo-app -n rafalcraft
+ 1992  kubectl describe deployment todo-app -n rafalcraft
+ 1993  kubectl get nodes
+ 1994  kubectl get events -n rafalcraft
+ 1995  kubectl describe nodes -n rafalcraft
+ 1996  kubectl rollout restart deployment todo-app -n rafalcraft
+ 1997  kubectl get pods -n rafalcraft -l app=todo-app
+ 1998  docker image | grep todo-app
+ 1999  docker images | grep todo-app
+ 2000  minikube image load todo-app:latest
+ 2001  kubectl get all
+ 2002  kubectl get all -n rafalcraft
+ 2003  minikube stop
+ 2004  minikube delete
+ 2005  docker ps
+ 2006  sudo systemctl start docker
+ 2007  minikube start -driver=docker
+ 2008  minikube start --driver=docker
+ 2009  hisroty > h.txt
+ 2010  hisroty >> h.txt
+ 2011  history >> h.txt

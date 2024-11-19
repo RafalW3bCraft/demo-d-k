@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Todo App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Previous CSS styles remain unchanged */
+        :root {
+            --primary-color: #4CAF50;
+            --danger-color: #f44336;
+            --warning-color: #ff9800;
+            --success-color: #4CAF50;
+            --background-color: #f5f5f5;
+            --card-background: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: var(--background-color);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card-background);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .todo-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .btn-submit {
+            grid-column: span 2;
+        }
+
+        .todo-list {
+            list-style: none;
+            display: grid;
+            gap: 15px;
+        }
+
+        .todo-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .todo-item.completed {
+            border-left-color: var(--success-color);
+            opacity: 0.8;
+        }
+
+        .todo-item.high-priority {
+            border-left-color: var(--danger-color);
+        }
+
+        .todo-content h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .todo-content p {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .todo-metadata {
+            display: flex;
+            gap: 15px;
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        .todo-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .priority-badge {
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+
+        .priority-high {
+            background: #ffebee;
+            color: var(--danger-color);
+        }
+
+        .priority-medium {
+            background: #fff3e0;
+            color: var(--warning-color);
+        }
+
+        .priority-low {
+            background: #e8f5e9;
+            color: var(--success-color);
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .error-message {
+            background: #ffebee;
+            color: var(--danger-color);
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .todo-form {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-submit {
+                grid-column: 1;
+            }
+
+            .todo-item {
+                grid-template-columns: 1fr;
+            }
+
+            .todo-actions {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+            <p>Organize your tasks efficiently</p>
+        </header>
+
+        <div class="controls">
+            <div class="filter-group">
+                <select id="statusFilter" onchange="fetchTodos()">
+                    <option value="all">All Tasks</option>
+                    <option value="active">Active</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <select id="priorityFilter" onchange="fetchTodos()">
+                    <option value="">All Priorities</option>
+                    <option value="high">High Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="low">Low Priority</option>
+                </select>
+                <select id="sortBy" onchange="fetchTodos()">
+                    <option value="createdAt">Sort by Created Date</option>
+                    <option value="dueDate">Sort by Due Date</option>
+                    <option value="priority">Sort by Priority</option>
+                </select>
+            </div>
+        </div>
+
+        <form class="todo-form" id="todoForm">
+            <div class="form-group">
+                <label for="todoTitle">Title</label>
+                <input type="text" id="todoTitle" required placeholder="Enter task title">
+            </div>
+            <div class="form-group">
+                <label for="todoPriority">Priority</label>
+                <select id="todoPriority">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="todoDueDate">Due Date</label>
+                <input type="datetime-local" id="todoDueDate">
+            </div>
+            <div class="form-group">
+                <label for="todoDescription">Description</label>
+                <textarea id="todoDescription" placeholder="Enter task description"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+                <i class="fas fa-plus"></i> Add Task
+            </button>
+        </form>
+
+        <ul class="todo-list" id="todoList">
+            <!-- Todos will be inserted here -->
+        </ul>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:3000/api';
+
+        // Fetch todos with filters
+        async function fetchTodos() {
+            const status = document.getElementById('statusFilter').value;
+            const priority = document.getElementById('priorityFilter').value;
+            const sort = document.getElementById('sortBy').value;
+
+            try {
+                const response = await fetch(
+                    `${API_URL}/todos?status=${status}&priority=${priority}&sort=${sort}`
+                );
+                const todos = await response.json();
+                renderTodos(todos);
+            } catch (error) {
+                showError('Failed to fetch todos');
+            }
+        }
+
+        // Render todos in the list
+        function renderTodos(todos) {
+            const todoList = document.getElementById('todoList');
+            todoList.innerHTML = todos.map(todo => `
+                <li class="todo-item ${todo.completed ? 'completed' : ''} ${todo.priority === 'high' ? 'high-priority' : ''}">
+                    <div class="todo-content">
+                        <h3>${escapeHtml(todo.title)}</h3>
+                        ${todo.description ? `<p>${escapeHtml(todo.description)}</p>` : ''}
+                        <div class="todo-metadata">
+                            <span class="priority-badge priority-${todo.priority}">
+                                ${todo.priority.charAt(0).toUpperCase() + todo.priority.slice(1)}
+                            </span>
+                            ${todo.dueDate ? `
+                                <span>
+                                    <i class="far fa-calendar"></i>
+                                    Due: ${new Date(todo.dueDate).toLocaleString()}
+                                </span>
+                            ` : ''}
+                            <span>
+                                <i class="far fa-clock"></i>
+                                Created: ${new Date(todo.createdAt).toLocaleString()}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="todo-actions">
+                        <button onclick="toggleTodo('${todo._id}', ${!todo.completed})">
+                            <i class="fas ${todo.completed ? 'fa-square-check' : 'fa-square'}"></i>
+                            ${todo.completed ? 'Mark Incomplete' : 'Mark Complete'}
+                        </button>
+                        <button onclick="deleteTodo('${todo._id}')" style="background: var(--danger-color)">
+                            <i class="fas fa-trash"></i>
+                            Delete
+                        </button>
+                    </div>
+                </li>
+            `).join('');
+        }
+
+        // Add new todo
+        document.getElementById('todoForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const todo = {
+                title: document.getElementById('todoTitle').value,
+                description: document.getElementById('todoDescription').value,
+                priority: document.getElementById('todoPriority').value,
+                dueDate: document.getElementById('todoDueDate').value || null
+            };
+
+            try {
+                const response = await fetch(`${API_URL}/todos`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(todo)
+                });
+
+                if (!response.ok) throw new Error('Failed to create todo');
+
+                document.getElementById('todoForm').reset();
+                fetchTodos();
+            } catch (error) {
+                showError('Failed to create todo');
+            }
+        });
+
+        // Toggle todo completion status
+        async function toggleTodo(id, completed) {
+            try {
+                const response = await fetch(`${API_URL}/todos/${id}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ completed })
+                });
+
+                if (!response.ok) throw new Error('Failed to update todo');
+
+                fetchTodos();
+            } catch (error) {
+                showError('Failed to update todo');
+            }
+        }
+
+        // Delete todo
+        async function deleteTodo(id) {
+            if (!confirm('Are you sure you want to delete this task?')) return;
+
+            try {
+                const response = await fetch(`${API_URL}/todos/${id}`, {
+                    method: 'DELETE'
+                });
+
+                if (!response.ok) throw new Error('Failed to delete todo');
+
+                fetchTodos();
+            } catch (error) {
+                showError('Failed to delete todo');
+            }
+        }
+
+        // Utility function to escape HTML
+        function escapeHtml(unsafe) {
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        // Show error message
+        function showError(message) {
+            const container = document.querySelector('.container');
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.innerHTML = `
+                <i class="fas fa-exclamation-circle"></i>
+                ${message}
+            `;
+            container.insertBefore(errorDiv, container.firstChild);
+            setTimeout(() => errorDiv.remove(), 5000);
+        }
+
+        // Initial load
+        fetchTodos();
+    </script>
+</body>
+</html>
